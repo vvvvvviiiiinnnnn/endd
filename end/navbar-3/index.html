@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="background"></div>
+    <nav class="navbar">
+      <img class="navbar-logo" src="./assets/logo.png" />
+    </nav>
+    <button class="navbar-burger" onclick="toggleMenu()"></button>
+    <button class="material-symbols-outlined" onclick="loadPageIntoFrame1()"></button>
+
+    <nav class="menu">
+      <a style="animation-delay: 0.1s" href="http://www.et.tku.edu.tw" target="z1">介紹</a>
+      <a href="#" style="animation-delay: 0.2s">影片</a>
+      <a href="#" style="animation-delay: 0.3s">互動</a>
+      <a href="#" style="animation-delay: 0.4s">作品</a>
+    </nav>
+    <script type="text/javascript">
+      const toggleMenu = () => {
+        document.body.classList.toggle("open");
+      };
+      function loadPageIntoFrame1() {
+              var frame = window.frames["z1"];  // 获取名为 myFrame 的 iframe
+              var url = "https://www.tku.edu.tw";  // 要加载的网页的 URL
+              frame.location.href = url;  // 在 iframe 中加载网页
+          }
+    </script>
+  </body>
+</html>
